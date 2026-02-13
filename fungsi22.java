@@ -27,6 +27,7 @@ public class fungsi22 {
             int pendapatan = hitungPendapatan(stock, harga, i);
             System.out.println("Pendapatan Cabang " + (i+1) + " = " + pendapatan);
         }
+        System.out.println("==============================================");
 
         for (int i = 0; i < stock.length; i++) {
             int pendapatan = hitungPendapatan(stock, harga, i);
@@ -35,6 +36,7 @@ public class fungsi22 {
             System.out.println("Cabang " + (i+1));
             System.out.println("Pendapatan: RP " + pendapatan);
             System.out.println("Status: " + status);
+            System.out.println("----------------------------------------------");
         }
     }
 }
