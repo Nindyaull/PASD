@@ -39,24 +39,31 @@ public class pemilihan22 {
             if (nilaiAkhir > 80 && nilaiAkhir <= 100) {
                 System.out.println("Nilai Akhir   : " + nilaiAkhir);
                 nilaiHuruf = "A";
+                System.out.println("Nilai Huruf : " + nilaiHuruf);
             } else if (nilaiAkhir > 73 && nilaiAkhir <= 80) {
                 System.out.println("Nilai Akhir   : " + nilaiAkhir);
                 nilaiHuruf = "B+";
+                System.out.println("Nilai Huruf : " + nilaiHuruf);
             } else if (nilaiAkhir > 65 && nilaiAkhir <= 73) {
                 System.out.println("Nilai Akhir   : " + nilaiAkhir);
                 nilaiHuruf = "B";
+                System.out.println("Nilai Huruf : " + nilaiHuruf);
             } else if (nilaiAkhir > 60 && nilaiAkhir <= 65) {
                 System.out.println("Nilai Akhir   : " + nilaiAkhir);
                 nilaiHuruf = "C+";
+                System.out.println("Nilai Huruf : " + nilaiHuruf);
             } else if (nilaiAkhir > 50 && nilaiAkhir <= 60) {
                 System.out.println("Nilai Akhir   : " + nilaiAkhir);
                 nilaiHuruf = "C";
+                System.out.println("Nilai Huruf : " + nilaiHuruf);
             } else if (nilaiAkhir > 39 && nilaiAkhir <= 50) {
                 System.out.println("Nilai Akhir   : " + nilaiAkhir);
                 nilaiHuruf = "D";
+                System.out.println("Nilai Huruf : " + nilaiHuruf);
             } else {
                 System.out.println("Nilai Akhir   : " + nilaiAkhir);
                 nilaiHuruf = "E";
+                System.out.println("Nilai Huruf : " + nilaiHuruf);
             }
             System.out.println("===============================");
             System.out.println("==============================="); 
