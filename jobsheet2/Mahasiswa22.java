@@ -25,6 +25,18 @@ public class Mahasiswa22 {
         }
     }
 
+    public Mahasiswa22() {
+    }
+
+    public Mahasiswa22(String nm, String nim, double ipk, String kls) {
+        nama = nm;
+        this.nim = nim;
+        this.ipk = ipk;
+        kelas = kls;
+        //Apabila nama parameter sama dengan nama atribut, 
+        // maka untuk merujuk pada variabel atribut ditambahkan sintaks this di depan nama atribut
+    }
+
     String nilaiKinerja() {
         if (ipk >= 3.5) {
             return "Kinerja sangat baik";
