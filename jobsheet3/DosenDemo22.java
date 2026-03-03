@@ -27,12 +27,23 @@ public class DosenDemo22 {
             dummy = sc.nextLine();
             usia = Integer.parseInt(dummy);
             System.out.println("---------------------------------------");
-
+            
             arrayOfDosen[i] = new Dosen22(kode, nama, jenisKelamin, usia);
         }
-
+        
         for (Dosen22 dsn : arrayOfDosen) {
             dsn.cetakInfo();
         }
+        
+        DataDosen22 data = new DataDosen22();
+        
+        data.dataSemuaDosen(arrayOfDosen);
+        data.jumlahDosenPerJenisKelamin(arrayOfDosen);
+        data.rerataUsiaDosenPerJenisKelamin(arrayOfDosen);
+        System.out.println("---------------------------------------");
+        data.infoDosenPalingTua(arrayOfDosen);
+        data.infoDosenPalingMuda(arrayOfDosen);
+
+        sc.close();
     }
 }
