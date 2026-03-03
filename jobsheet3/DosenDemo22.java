@@ -31,12 +31,16 @@ public class DosenDemo22 {
             arrayOfDosen[i] = new Dosen22(kode, nama, jenisKelamin, usia);
         }
         
+        int i = 1;
         for (Dosen22 dsn : arrayOfDosen) {
+            System.out.println("Data Dosen Ke-" + i);
             dsn.cetakInfo();
+            i++;
         }
         
         DataDosen22 data = new DataDosen22();
         
+        System.out.println("============ DATA SEMUA DOSEN ============");
         data.dataSemuaDosen(arrayOfDosen);
         data.jumlahDosenPerJenisKelamin(arrayOfDosen);
         data.rerataUsiaDosenPerJenisKelamin(arrayOfDosen);
