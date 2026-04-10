@@ -19,27 +19,43 @@ public class MahasiswaDemo22 {
             System.out.print("IPK   : ");
             double ipk = sc.nextDouble();
             sc.nextLine();
+            System.out.println("------------------------------");
 
             Mahasiswa22 m = new Mahasiswa22(nim, nama, kelas, ipk);
             list.tambah(m);
-            System.out.println();
         }
-        
-        System.out.println("Data mahasiswa sebelum sorting: ");
-        list.tampil();
-        
-        System.out.println("Data mahasiswa setelah sorting berdasarkan IPK (DESC) : ");
-        list.bubbleSort();
-        list.tampil();
 
-        System.out.println("Data yang sudah terurut menggunakan SELECTION SORT (ASC)");
-        list.selectionSort();
         list.tampil();
+        //melakukan pencarian data sequential
+        System.out.println("----------------------------------------------------");
+        System.out.println("Pencarian Data");
+        System.out.println("----------------------------------------------------");
+        System.out.println("Masukkan IPK Mahasiswa yang Dicari: ");
+        System.out.print("IPK: ");
+        double cari = sc.nextDouble();
 
-        System.out.println("Data yang sudah terurut menggunakan INSERTION SORT (ASC)");
-        list.insertionSort();
-        list.tampil();
-        sc.close();
+        System.out.println("Menggunakan Sequential Searching");
+        double posisi = list.sequentialSearching(cari);
+        int pss = (int)posisi;
+        list.tampilPosisi(cari, pss);
+        list.tampilDataSearch(cari, pss);
+
+        
+        // System.out.println("Data mahasiswa sebelum sorting: ");
+        // list.tampil();
+        
+        // System.out.println("Data mahasiswa setelah sorting berdasarkan IPK (DESC) : ");
+        // list.bubbleSort();
+        // list.tampil();
+
+        // System.out.println("Data yang sudah terurut menggunakan SELECTION SORT (ASC)");
+        // list.selectionSort();
+        // list.tampil();
+
+        // System.out.println("Data yang sudah terurut menggunakan INSERTION SORT (ASC)");
+        // list.insertionSort();
+        // list.tampil();
+        // sc.close();
     }
     // Mahasiswa22 m1 = new Mahasiswa22("123", "Zidan", "2A", 3.2);
     // Mahasiswa22 m2 = new Mahasiswa22("124", "Ayu", "2A", 3.5);
