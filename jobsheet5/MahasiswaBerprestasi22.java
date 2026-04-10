@@ -95,7 +95,7 @@ public class MahasiswaBerprestasi22 {
             mid = (left + right) / 2;
             if (cari == listMhs[mid].ipk) {
                 return (mid);
-            } else if (listMhs[mid].ipk > cari) {
+            } else if (listMhs[mid].ipk < cari) { //diubah menjadi kurang dari
                 return findBinarySearch(cari, left, mid-1);
             } else {
                 return findBinarySearch(cari, mid+2, right);
