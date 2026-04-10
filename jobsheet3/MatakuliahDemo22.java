@@ -2,8 +2,6 @@ package jobsheet3;
 
 import java.util.Scanner;
 
-import jobsheet2.MataKuliah22;
-
 public class MatakuliahDemo22 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
