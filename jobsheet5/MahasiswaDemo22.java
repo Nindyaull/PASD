@@ -25,7 +25,7 @@ public class MahasiswaDemo22 {
             list.tambah(m);
         }
 
-        // list.tampil();
+        list.tampil();
         //melakukan pencarian data sequential
         // System.out.println("----------------------------------------------------");
         // System.out.println("Pencarian Data");
@@ -43,10 +43,10 @@ public class MahasiswaDemo22 {
         // list.tampilDataSearch(cari, pss);
         
         //melakukan pencarian data Binary
-        System.out.println("Data mahasiswa setelah sorting berdasarkan IPK (DESC) : ");
-        list.bubbleSort();
+        System.out.println("Data yang sudah terurut menggunakan SELECTION SORT (ASC)");
+        list.selectionSort();
         list.tampil();
-
+        
         System.out.println("----------------------------------------------------");
         System.out.println("Pencarian Data");
         System.out.println("----------------------------------------------------");
@@ -67,10 +67,10 @@ public class MahasiswaDemo22 {
         // System.out.println("Data mahasiswa sebelum sorting: ");
         // list.tampil();
         
-
-        // System.out.println("Data yang sudah terurut menggunakan SELECTION SORT (ASC)");
-        // list.selectionSort();
+        // System.out.println("Data mahasiswa setelah sorting berdasarkan IPK (DESC) : ");
+        // list.bubbleSort();
         // list.tampil();
+
 
         // System.out.println("Data yang sudah terurut menggunakan INSERTION SORT (ASC)");
         // list.insertionSort();
