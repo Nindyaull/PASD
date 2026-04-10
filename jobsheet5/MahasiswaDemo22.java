@@ -5,8 +5,11 @@ import java.util.Scanner;
 public class MahasiswaDemo22 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        MahasiswaBerprestasi22 list = new MahasiswaBerprestasi22();
-        int jmlMhs = 5;
+        System.out.print("Masukkan jumlah mahasiswa: ");
+        int jmlMhs = sc.nextInt();
+        sc.nextLine();
+        
+        MahasiswaBerprestasi22 list = new MahasiswaBerprestasi22(jmlMhs);
 
         for (int i = 0; i < jmlMhs; i++) {
             System.out.println("Masukkan Data Mahasiswa ke-" + (i+1));
@@ -43,10 +46,6 @@ public class MahasiswaDemo22 {
         // list.tampilDataSearch(cari, pss);
         
         //melakukan pencarian data Binary
-        System.out.println("Data yang sudah terurut menggunakan SELECTION SORT (ASC)");
-        list.selectionSort();
-        list.tampil();
-        
         System.out.println("----------------------------------------------------");
         System.out.println("Pencarian Data");
         System.out.println("----------------------------------------------------");
@@ -71,6 +70,9 @@ public class MahasiswaDemo22 {
         // list.bubbleSort();
         // list.tampil();
 
+        // System.out.println("Data yang sudah terurut menggunakan SELECTION SORT (ASC)");
+        // list.selectionSort();
+        // list.tampil();
 
         // System.out.println("Data yang sudah terurut menggunakan INSERTION SORT (ASC)");
         // list.insertionSort();
