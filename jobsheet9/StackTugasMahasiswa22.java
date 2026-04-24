@@ -81,4 +81,18 @@ public class StackTugasMahasiswa22 {
     public int hitungTugas() {
         return top + 1;
     }
+
+    public String konversiDesimalkeBiner(int nilai) {
+        StackKonversi22 stack = new StackKonversi22();
+        while (nilai > 0) {
+            int sisa = nilai % 2;
+            stack.push(sisa);
+            nilai = nilai/2;
+        }
+        String biner = new String();
+        while (!stack.isEmpty()) {
+            biner += stack.pop();
+        }
+        return biner;
+    }
 }
