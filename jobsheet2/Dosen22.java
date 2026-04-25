@@ -7,6 +7,7 @@ public class Dosen22 {
     int tahunBergabung;
     String bidangKeahlian;
 
+    // untuk menampilkan informasi dosen
     void tampilInformasi() {
         System.out.println("ID Dosen: " + idDosen);
         System.out.println("Nama Dosen: " + nama);
