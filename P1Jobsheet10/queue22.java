@@ -36,6 +36,7 @@ public class queue22 {
             System.out.println("Elemen terdepan: " + data[front]);
         } else {
             System.out.println("Queue masih kosong");
+            System.exit(0); // Menutup program secara paksa
         }
     }
 
@@ -67,6 +68,7 @@ public class queue22 {
     public void Enqueue(int dt) {
         if (IsFull()) {
             System.out.println("Queue sudah penuh");
+            System.exit(0); // menutup program secara paksa
         } else {
             if (IsEmpty()) {
                 front = rear = 0;
