@@ -100,7 +100,9 @@ public class DoubleLinkedList22 {
             System.out.println("Linked List Kosong.");
             return;
         }
-
+        System.out.println("Data berhasil dihapus.");
+        head.data.tampil();
+        
         if (head == tail) {
             head = tail = null;
         } else {
@@ -108,13 +110,15 @@ public class DoubleLinkedList22 {
             head.prev = null;
         }
     }
-
+    
     // untuk menghapus node pada bagian akhir linked list
     public void removeLast() {
         if (isEmpty()) {
             System.out.println("Linked List Kosong.");
             return;
         }
+        System.out.println("Data berhasil dihapus.");
+        tail.data.tampil();
 
         if (head == tail) {
             head = tail = null;
