@@ -78,4 +78,20 @@ public class DoubleLinkedList22 {
             current = current.next;
         }
     }
+
+    // untuk melakukan traversal dari node tail ke head dan menampilkan seluruh isi linked list
+    public void printReserve() {
+        if (isEmpty()) {
+            System.out.println("Linked List masih kosong.");
+            return;
+        }
+
+        System.out.println("Menampilkan data secara terbalik: ");
+        Node22 current = tail;
+        while (current != null) {
+            current.data.tampil();
+            current = current.prev;
+        }
+    }
+
 }
