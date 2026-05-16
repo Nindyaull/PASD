@@ -3,6 +3,8 @@ package jobsheet11;
 public class QueueLL22 {
     Node22 front;
     Node22 rear;
+    Nodee22 frontt;
+    Nodee22 rearr;
     int size = 0;
     int max = 10;
 
@@ -21,7 +23,6 @@ public class QueueLL22 {
     }
 
     public void enqueue(Mahasiswa22 data) {
-
         if (isFull()) {
             System.out.println("Antrian penuh");
             return;
@@ -35,7 +36,24 @@ public class QueueLL22 {
             rear.next = baru;
             rear = baru;
         }
+        size++;
+        System.out.println(data.nama + " berhasil masuk antrian");
+    }
 
+    public void enqueuee(Mhs22 data) {
+        if (isFull()) {
+            System.out.println("Antrian penuh");
+            return;
+        }
+
+        Nodee22 baruu = new Nodee22(data, null);
+
+        if (isEmpty()) {
+            frontt = rearr = baruu;
+        } else {
+            rearr.next = baruu;
+            rearr = baruu;
+        }
         size++;
         System.out.println(data.nama + " berhasil masuk antrian");
     }
@@ -47,7 +65,7 @@ public class QueueLL22 {
         } else {
 
             System.out.println("Memanggil antrian:");
-            front.data.tampil();
+            front.data.tampilInformasi();
 
             front = front.next;
             size--;
@@ -61,14 +79,14 @@ public class QueueLL22 {
     public void tampilDepan() {
         if (!isEmpty()) {
             System.out.println("Antrian terdepan:");
-            front.data.tampil();
+            front.data.tampilInformasi();
         }
     }
 
     public void tampilBelakang() {
         if (!isEmpty()) {
             System.out.println("Antrian terakhir:");
-            rear.data.tampil();
+            rear.data.tampilInformasi();
         }
     }
 
@@ -87,7 +105,7 @@ public class QueueLL22 {
             System.out.println("Isi antrian:");
 
             while (temp != null) {
-                temp.data.tampil();
+                temp.data.tampilInformasi();
                 temp = temp.next;
             }
         }

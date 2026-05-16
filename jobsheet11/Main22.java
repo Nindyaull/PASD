@@ -5,11 +5,8 @@ import java.util.Scanner;
 public class Main22 {
 
     public static void main(String[] args) {
-
         Scanner sc = new Scanner(System.in);
-
         QueueLL22 antrian = new QueueLL22();
-
         int pilih;
 
         do {
@@ -33,13 +30,11 @@ public class Main22 {
 
                     System.out.print("NIM  : ");
                     String nim = sc.nextLine();
-
                     System.out.print("Nama : ");
                     String nama = sc.nextLine();
+                    Mhs22 mhs = new Mhs22(nim, nama);
 
-                    Mahasiswa22 mhs = new Mahasiswa22(nim, nama);
-
-                    antrian.enqueue(mhs);
+                    antrian.enqueuee(mhs);
                     break;
 
                 case 2:
