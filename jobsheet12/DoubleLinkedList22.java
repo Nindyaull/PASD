@@ -94,4 +94,33 @@ public class DoubleLinkedList22 {
         }
     }
 
+    // untuk menghapus node pada bagian awal linked list
+    public void removeFirst() {
+        if (isEmpty()) {
+            System.out.println("Linked List Kosong.");
+            return;
+        }
+
+        if (head == tail) {
+            head = tail = null;
+        } else {
+            head = head.next;
+            head.prev = null;
+        }
+    }
+
+    // untuk menghapus node pada bagian akhir linked list
+    public void removeLast() {
+        if (isEmpty()) {
+            System.out.println("Linked List Kosong.");
+            return;
+        }
+
+        if (head == tail) {
+            head = tail = null;
+        } else {
+            tail = tail.prev;
+            tail.next = null;
+        }
+    }
 }
