@@ -164,4 +164,70 @@ public class BinaryTree22 {
             }
         }
     }
+
+    // method untuk penambahan secara rekursif
+    public void addRekursif(Mahasiswa22 mahasiswa) {
+        root = rekursifHelper(root, mahasiswa);
+    }
+
+    // method helper untuk menjalankan logika rekursif
+    public Node22 rekursifHelper(Node22 current, Mahasiswa22 mahasiswa) {
+        if (current == null) {
+            return new Node22(mahasiswa);
+        }
+        if (mahasiswa.ipk < current.mahasiswa.ipk) {
+            current.left = rekursifHelper(current.left, mahasiswa);
+        } else if (mahasiswa.ipk > current.mahasiswa.ipk) {
+            current.right = rekursifHelper(current.right, mahasiswa);
+        }
+        return current;
+    }
+
+    // untuk mencari IPK terendah
+    public void cariMinIPK() {
+        if (isEmpty()) {
+            System.out.println("Binary Tree masih kosong!");
+            return;
+        }
+        Node22 current = root;
+        while (current.left != null) {
+            current = current.left; // terus menelusuri cabang paling kiri
+        }
+
+        System.out.println("\n--- Data Mahasiswa dengan IPK Terendah ---");
+        current.mahasiswa.tampilInformasi();
+    }
+
+    // untuk mencari IPK tertinggi
+    public void cariMaxIPK() {
+        if (isEmpty()) {
+            System.out.println("Binary Tree masih kosong!");
+            return;
+        }
+        Node22 current = root;
+        while (current.right != null) {
+            current = current.right; // terus menelusuri cabang paling kanan
+        }
+        
+        System.out.println("\n--- Data Mahasiswa dengan IPK Tertinggi ---");
+        current.mahasiswa.tampilInformasi();
+    }
+
+    // untuk menampilkan data mahasiswa dgn IPK di atas batas
+    public void tampilMahasiswaIPKdiAtas(double ipkBatas) {
+        System.out.println("\n--- Daftar Mahasiswa dengan IPK > " + ipkBatas + " ---");
+        tampilBatasHelper(root, ipkBatas);
+    }
+
+    // method helper untuk menjalankan logika rekursif
+    public void tampilBatasHelper(Node22 node, double batas) {
+        if (node != null) {
+            tampilBatasHelper(node.left, batas);
+
+            if (node.mahasiswa.ipk > batas) {
+                node.mahasiswa.tampilInformasi();
+            }
+            tampilBatasHelper(node.right, batas);
+        }
+    }
 }
